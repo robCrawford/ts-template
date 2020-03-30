@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "removeComments": true,
+    "noEmit": true
+  },
+  "include": [
+    "./src/**/*",
+  ],
+  "exclude": [
+    ".git",
+    "node_modules"
+  ]
+}
