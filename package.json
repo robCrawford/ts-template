@@ -5,9 +5,10 @@
   "main": "src/ts/app.js",
   "scripts": {
     "dev": "parcel serve ./index.html",
-    "build": "yarn typecheck && rm -rf ./dist && cross-env NODE_ENV=production parcel build ./index.html --public-url .",
-    "typecheck": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "ts:check": "tsc --noEmit",
+    "ts:clean": "rm -rf ./dist",
+    "ts:build": "yarn ts:clean && yarn ts:check && cross-env NODE_ENV=production parcel build ./index.html --public-url ."
   },
   "author": "Rob Crawford",
   "repository": {
@@ -16,14 +17,14 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^25.1.4",
-    "@typescript-eslint/eslint-plugin": "^2.25.0",
-    "@typescript-eslint/parser": "^2.25.0",
-    "cross-env": "^7.0.0",
-    "eslint": "^6.8.0",
-    "jest": "^25.0.0",
-    "parcel-bundler": "^1.12.4",
-    "ts-jest": "^25.3.0",
-    "typescript": "^3.8.3"
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.26.0",
+    "jest": "^26.6.3",
+    "parcel-bundler": "^1.12.5",
+    "ts-jest": "^26.5.6",
+    "typescript": "^4.2.4"
   }
 }
